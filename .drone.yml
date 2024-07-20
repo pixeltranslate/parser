@@ -3,8 +3,11 @@ type: kubernetes
 name: CI
 
 trigger:
+  branch:
+    - main
   event:
     - pull_request
+    - push
 
 environment:
   NODE_VER: node:22.3.0-slim
