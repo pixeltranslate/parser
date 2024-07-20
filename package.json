@@ -1,0 +1,27 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "pnpm": ">=9.4.0",
+    "node": ">=22.3.0"
+  },
+  "scripts": {
+    "dev": "nuxt dev",
+    "typecheck": "nuxt typecheck",
+    "lint": "eslint --max-warnings 0 .",
+    "lint:fix": "eslint . --fix",
+    "generate": "nuxt generate",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "nuxt": "^3.12.2"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.11.5",
+    "@types/node": "^20.14.11",
+    "eslint": "^8.57.0",
+    "typescript": "^5.5.3",
+    "vue-tsc": "^2.0.26"
+  }
+}
