@@ -2,15 +2,15 @@ kind: pipeline
 type: kubernetes
 name: CI
 
+global-variables:
+  NODE_VER: &NODE_VER node:22.3.0-slim
+
 trigger:
   branch:
     - main
   event:
     - pull_request
     - push
-
-environment:
-  NODE_VER: node:22.3.0-slim
 
 steps:
   - name: restore-cache
@@ -24,23 +24,23 @@ steps:
       mount:
         - ./.pnpm-store
   - name: install
-    image: $NODE_VER
+    image: *NODE_VER
     commands:
       - corepack enable
       - pnpm config set store-dir .pnpm-store
       - pnpm i
   - name: lint
-    image: $NODE_VER
+    image: *NODE_VER
     commands:
       - corepack enable
       - pnpm lint
   - name: typecheck
-    image: $NODE_VER
+    image: *NODE_VER
     commands:
       - corepack enable
       - pnpm typecheck
   - name: build
-    image: $NODE_VER
+    image: *NODE_VER
     commands:
       - corepack enable
       - pnpm build
