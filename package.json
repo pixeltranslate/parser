@@ -9,6 +9,7 @@
   },
   "scripts": {
     "dev": "nuxt dev",
+    "build": "nuxt build",
     "typecheck": "nuxt typecheck",
     "lint": "eslint --max-warnings 0 .",
     "lint:fix": "eslint . --fix",
