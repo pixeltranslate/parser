@@ -26,23 +26,23 @@ steps:
   - name: install
     image: *NODE_VER
     commands:
-      - corepack enable
+      - corepack enable pnpm
       - pnpm config set store-dir .pnpm-store
       - pnpm i
   - name: lint
     image: *NODE_VER
     commands:
-      - corepack enable
+      - corepack enable pnpm
       - pnpm lint
   - name: typecheck
     image: *NODE_VER
     commands:
-      - corepack enable
+      - corepack enable pnpm
       - pnpm typecheck
   - name: build
     image: *NODE_VER
     commands:
-      - corepack enable
+      - corepack enable pnpm
       - pnpm build
   - name: rebuild-cache
     image: drillster/drone-volume-cache
