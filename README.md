@@ -1,21 +1,8 @@
-# parser-app
+# @pixeltranslate/parser
 
-This is a [sidebase merino](https://sidebase.io/) app created by running `pnpm create sidebase@latest`. This project uses the following technologies for a great developer- and user-experience:
-- [TypeScript](https://www.typescriptlang.org/)
-- [Nuxt 3](https://nuxt.com)
-- Linting via ESLint and @antfu/eslint-config
+This is the translation file parser used by [PixelTranslate](https://pixeltranslate.com) to import pre-existing translation files.
 
-## How to get going?
-
-This is a straight-forward setup with minimal templating and scaffolding. The options you selected during the sidebase CLI setup are all here though. Good places to continue reading are:
-- [the First Steps documentation](https://sidebase.io/sidebase/usage)
-- [our discord](https://discord.gg/auc8eCeGzx)
-
-Some tasks you should probably do in the beginning are:
-- [ ] replace this generic README with a more specific one
-- [ ] install the Vue Volar extension
-- [ ] enable [Volar takeover mode](https://nuxt.com/docs/getting-started/installation#prerequisites) to ensure a smooth editor setup
-- [ ] [install Nuxt 3 devtools](https://github.com/nuxt/devtools#installation) if you want to use them
+## Development
 
 ### Setup
 
@@ -33,16 +20,15 @@ Start the development server on http://localhost:3000
 pnpm run dev
 ```
 
-### Production
+### Installing the layer
 
-Build the application for production:
+To use the layer, add the following into your `nuxt.config.ts`:
 
-```bash
-pnpm run build
-```
-
-Locally preview production build:
-
-```bash
-pnpm run preview
+```ts
+export default defineNuxtConfig({
+  layers: [
+    'github:pixeltranslate/parser', // Current main branch
+    'github:pixeltranslate/parser#v1.0.0' // From a certain release tag
+  ]
+})
 ```
