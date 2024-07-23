@@ -39,6 +39,11 @@ steps:
     commands:
       - corepack enable pnpm
       - pnpm typecheck
+  - name: test
+    image: *NODE_VER
+    commands:
+      - corepack enable pnpm
+      - pnpm test
   - name: build
     image: *NODE_VER
     commands:
