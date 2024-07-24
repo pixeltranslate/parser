@@ -20,6 +20,7 @@
     "test": "pnpm vitest run"
   },
   "dependencies": {
+    "flat": "^6.0.1",
     "nuxt": "^3.12.2"
   },
   "devDependencies": {
