@@ -14,7 +14,7 @@ import type { ParseOutput } from '~/types/parse'
  * If the object is invalid (undefined), it will throw an error
  *
  * @param object = the nested json
- * @param delimiter = the output delimited
+ * @param delimiter = the output delimiter
  */
 export default function (object: any, delimiter: string = '.'): ParseOutput<Map<string, string>> {
   const stopWatch = Date.now()
