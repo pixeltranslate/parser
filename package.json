@@ -1,7 +1,6 @@
 {
-  "name": "nuxt-app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@pixeltranslate/parser",
+  "version": "0.1.0-alpha.3",
   "type": "module",
   "main": "./nuxt.config.ts",
   "engines": {
